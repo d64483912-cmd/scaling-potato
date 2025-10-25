@@ -234,12 +234,42 @@ dependency_command: 'cd /home/runner/app && npm install && cd client && npm inst
 4. **Iteration**: Process repeats recursively based on depth setting
 5. **Synthesis**: Final answer is generated from all accumulated learnings
 
+## 🚀 Vercel Deployment
+
+Deploy your own instance to Vercel in just a few clicks!
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone)
+
+### Quick Deployment Steps:
+
+1. **Click the Deploy button** or go to [Vercel](https://vercel.com/new)
+2. **Import your repository** from GitHub
+3. **Configure build settings**:
+   - Framework: Next.js
+   - Build Command: `cd client && npm install && npm run build`
+   - Output Directory: `client/.next`
+4. **Add environment variables**:
+   - `OPENROUTER_API_KEY` - Your OpenRouter API key
+   - `FIRECRAWL_API_KEY` - Your Firecrawl API key
+   - (Optional) `OPENROUTER_MODEL` - Model to use (default: google/gemini-2.0-flash-exp:free)
+5. **Deploy** and get your production URL!
+
+**📚 Detailed Guide**: See [DEPLOYMENT.md](./DEPLOYMENT.md) for comprehensive deployment instructions.
+
+### Key Features for Vercel:
+- Next.js API routes replace Express backend
+- Optimized for serverless deployment
+- Global CDN distribution
+- Automatic HTTPS
+- Zero configuration deployment
+
 ## 📝 Notes
 
 - The free tier of OpenRouter has rate limits, so be mindful of usage
 - Firecrawl API also has rate limits on free tier
 - Increase breadth and depth for more comprehensive research (but slower)
 - Results are not saved by default; copy them before starting a new search
+- For Vercel deployment, Pro plan or higher is recommended for longer function timeouts
 
 ## 🤝 Contributing
 

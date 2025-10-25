@@ -48,8 +48,8 @@ export default function Home() {
     });
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3051';
-      const response = await fetch(`${apiUrl}/api/research`, {
+      // Use relative path for API routes - works both locally and on Vercel
+      const response = await fetch('/api/research', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
