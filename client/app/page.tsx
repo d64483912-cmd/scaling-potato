@@ -4,6 +4,9 @@ import { useState } from 'react';
 import ResearchForm from '@/components/ResearchForm';
 import ResearchProgress from '@/components/ResearchProgress';
 import ResearchResults from '@/components/ResearchResults';
+import HamburgerMenu from '@/components/HamburgerMenu';
+import SettingsPanel from '@/components/SettingsPanel';
+import { useSettings } from '@/contexts/SettingsContext';
 
 interface ResearchState {
   isLoading: boolean;
@@ -26,6 +29,7 @@ interface ResearchState {
 }
 
 export default function Home() {
+  const { openRouterApiKey, selectedModel } = useSettings();
   const [research, setResearch] = useState<ResearchState>({
     isLoading: false,
   });
@@ -49,6 +53,8 @@ export default function Home() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          ...(openRouterApiKey && { 'X-OpenRouter-API-Key': openRouterApiKey }),
+          ...(selectedModel && { 'X-Selected-Model': selectedModel }),
         },
         body: JSON.stringify({ query, breadth, depth }),
       });
@@ -77,6 +83,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
+      <HamburgerMenu />
+      <SettingsPanel />
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col items-center space-y-8">
           {/* Header */}
