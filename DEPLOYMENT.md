@@ -16,11 +16,16 @@ This guide explains how to deploy the Deep Research Web App to Vercel.
 
 1. Go to [vercel.com/new](https://vercel.com/new)
 2. Import your GitHub repository
-3. Configure the project settings:
+3. **IMPORTANT**: Configure the project settings:
    - **Framework Preset**: Next.js
-   - **Root Directory**: `./` (leave as default)
-   - **Build Command**: `cd client && npm install && npm run build`
-   - **Output Directory**: `client/.next`
+   - **Root Directory**: `client` (⚠️ MUST set this to `client`)
+   - **Build Command**: Leave empty (will use defaults)
+   - **Output Directory**: Leave empty (will use defaults)
+   - **Install Command**: Leave empty (will use defaults)
+
+   **OR** if keeping root directory as `./`:
+   - **Root Directory**: `./` 
+   - Vercel will use the `vercel.json` configuration automatically
 
 ### 2. Configure Environment Variables
 

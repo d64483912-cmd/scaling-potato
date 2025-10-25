@@ -1,6 +1,6 @@
 # Deep Research - AI-Powered Research Assistant (Web App)
 
-A full-stack web application for performing iterative, deep research on any topic using AI and web scraping. This is a customized version of the [original deep-research project](https://github.com/dzhng/deep-research.git), transformed into a modern web application with a sleek monochrome-dark interface.
+A full-stack web application for performing iterative, deep research on any topic using AI and web scraping. This is a custhttps://scaling-potato.vercel.app/omized version of the [original deep-research project](https://github.com/dzhng/deep-research.git), transformed into a modern web application with a sleek monochrome-dark interface.
 
 ## ✨ Features
 

@@ -1,0 +1,40 @@
+# Vercel Ignore File
+# Files and directories to exclude from deployment
+
+# Development files
+.env.local
+.env*.local
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Documentation (optional - keep if you want them deployed)
+SETUP.md
+PROJECT_SUMMARY.md
+QUICK_REFERENCE.md
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# Test files
+*.test.ts
+*.spec.ts
+
+# Scripts
+start-dev.sh
+
+# Unnecessary for deployment
+report.md

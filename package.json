@@ -9,6 +9,7 @@
     "api": "tsx --env-file=.env.local src/api.ts",
     "dev": "./start-dev.sh",
     "docker": "tsx src/run.ts",
+    "vercel-build": "cd client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
